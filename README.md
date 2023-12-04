@@ -1,9 +1,6 @@
 
 # Tec. em Desenvolvimento de Sistemas
 
-Uma breve descrição sobre o que esse projeto faz e para quem ele é
-
-
 ## Mód I
 
 - Planejar o desenvolvimento de Software
