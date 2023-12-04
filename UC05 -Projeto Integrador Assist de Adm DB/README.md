@@ -7,8 +7,6 @@
 - [Atvidade 1](#Atividade-1)
 - [Atvidade 2](#Atividade-2)
 - [Atvidade 3](#Atividade-3)
-- [Atvidade 4](#Atividade-4)
-- [Atvidade 5](#Atividade-5)
 - [Sobre o projeto](#sobre-o-projeto)
 - [Definição do Projeto](#definição-do-projeto)
 - [Técnologias utilizadas](#técnologias-utilizadas)
