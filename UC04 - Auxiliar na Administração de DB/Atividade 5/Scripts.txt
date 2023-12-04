@@ -1,0 +1,89 @@
+CREATE TABLE IF NOT EXISTS quarto (
+  `idquarto` INT NOT NULL AUTO_INCREMENT,
+  `capacidade` INT NOT NULL,
+  `diaria` DECIMAL(19,2) NULL DEFAULT NULL,
+  `hotel_cnpj` VARCHAR(14) NULL DEFAULT NULL,
+  `nome_quarto` VARCHAR(255) NULL DEFAULT NULL,
+  `numero` INT NOT NULL,
+  PRIMARY KEY (`idquarto`),
+  INDEX `fk_quarto_hotel_idx` (`hotel_cnpj` ASC),
+  CONSTRAINT `fk_quarto_hotel`
+    FOREIGN KEY (`hotel_cnpj`)
+    REFERENCES hotel (`cnpj`)
+);
+
+CREATE TABLE IF NOT EXISTS reserva (
+  `idreserva` INT NOT NULL AUTO_INCREMENT,
+  `data_check_in` DATE NULL DEFAULT NULL,
+  `data_check_out` DATE NULL DEFAULT NULL,
+  `hospede_cpf` VARCHAR(255) NULL DEFAULT NULL,
+  `idquarto` INT NOT NULL,
+  `quantidade_adulto` INT NOT NULL,
+  `quantidade_crianca` INT NOT NULL,
+  `valor_total` DECIMAL(19,2) NULL DEFAULT NULL,
+  PRIMARY KEY (`idreserva`),
+  INDEX `fk_reserva_quarto_idx` (`idquarto` ASC),
+  INDEX `fk_reserva_hospede_idx` (`hospede_cpf` ASC),
+  CONSTRAINT `fk_reserva_quarto`
+    FOREIGN KEY (`idquarto`)
+    REFERENCES `quarto` (`idquarto`),
+  CONSTRAINT `fk_reserva_hospede`
+    FOREIGN KEY (`hospede_cpf`)
+    REFERENCES `hospede` (`cpf`)
+);
+CREATE TABLE IF NOT EXISTS funcionario (
+  `cpf` VARCHAR(11) NOT NULL,
+  `idcargos` INT NOT NULL,
+  `hotel_cnpj` VARCHAR(14) NULL DEFAULT NULL,
+  `nome` VARCHAR(80) NOT NULL,
+  `data_admissao` DATE NOT NULL,
+  `data_demissao` DATE NULL DEFAULT NULL,
+  `senha` VARCHAR(8) NOT NULL,
+  PRIMARY KEY (`cpf`),
+  UNIQUE INDEX `cpf_UNIQUE` (`cpf` ASC) VISIBLE,
+  INDEX `fk_funcionario_cargo_idx` (`idcargos` ASC),
+  INDEX `fk_funcionario_hotel_idx` (`hotel_cnpj` ASC),
+  CONSTRAINT `fk_funcionario_cargo`
+    FOREIGN KEY (`idcargos`)
+    REFERENCES `cargo` (`id`),
+  CONSTRAINT `fk_funcionario_hotel`
+    FOREIGN KEY (`hotel_cnpj`)
+    REFERENCES `hotel` (`cnpj`)
+);
+CREATE TABLE IF NOT EXISTS cargo (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `cargo` VARCHAR(255) NULL DEFAULT NULL,
+  `salario` DECIMAL(19,2) NULL DEFAULT NULL,
+  `idcargos` INT NOT NULL,
+  PRIMARY KEY (`id`)
+);
+CREATE TABLE IF NOT EXISTS forma_de_pagamento (
+  `idpagamento` INT NOT NULL AUTO_INCREMENT,
+  `forma_pagamento` VARCHAR(255) NULL DEFAULT NULL,
+  `idreserva` INT NULL DEFAULT NULL,
+  PRIMARY KEY (`idpagamento`),
+  INDEX `fk_pagamento_reserva_idx` (`idreserva` ASC),
+  CONSTRAINT `fk_pagamento_reserva`
+    FOREIGN KEY (`idreserva`)
+    REFERENCES `reserva` (`idreserva`)
+);
+CREATE TABLE IF NOT EXISTS hotel (
+  `cnpj` VARCHAR(14) NOT NULL,
+  `nome_hotel` VARCHAR(80) NOT NULL,
+  `logradouro` VARCHAR(255) NOT NULL,
+  `numero` INT NOT NULL,
+  `cep` VARCHAR(8) NOT NULL,
+  `uf` VARCHAR(2) NOT NULL,
+  `cidade` VARCHAR(45) NOT NULL,
+  `nome` VARCHAR(255) NULL DEFAULT NULL,
+  PRIMARY KEY (`cnpj`)
+);
+
+
+CREATE TABLE IF NOT EXISTS hospede (
+  `cpf` VARCHAR(255) NOT NULL,
+  `email` VARCHAR(255) NULL DEFAULT NULL,
+  `nome` VARCHAR(255) NULL DEFAULT NULL,
+  `telefone` VARCHAR(255) NULL DEFAULT NULL,
+  PRIMARY KEY (`cpf`)
+);
