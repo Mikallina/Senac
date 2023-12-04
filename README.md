@@ -3,7 +3,7 @@
 
 ## Mód I
 
-## Índice
+### Índice
 
 - [UC01 - Planejar o desenvolvimento de Software](https://github.com/Mikallina/Senac/tree/main/Mod%20I/UC01%20-%20Planejar%20o%20Desenvolvimento%20de%20Software)
 - [UC02 - Desenvolver Algoritimos ](https://github.com/Mikallina/Senac/tree/main/Mod%20I/UC02%20-%20Desenvolver%20Algoritimos)
