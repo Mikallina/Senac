@@ -48,7 +48,7 @@ O sistema de gerenciamento de hotéis é uma aplicação web desenvolvida para f
 **Usabilidade:**
 - Interface intuitiva e amigável para facilitar a navegação.
 
-7. Tecnologias Previstas:
+## 7. Tecnologias Previstas:
 - Garantir que o sistema seja responsivo mesmo com grandes volumes de dados.
 - Banco de Dados: MySQL
 - Backend: Java
