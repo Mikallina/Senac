@@ -1,4 +1,4 @@
-Atividade 2
+## Atividade 2
  
 Contexto
 A empresa de desenvolvimento retorna ao projeto de desenvolvimento de sistema para uma agência de viagens. Esse sistema precisa registrar pacotes de viagens e dados de uma venda. Cada pacote de viagens é formado pelo meio de transporte e pela hospedagem – cada meio de transporte tem tipo e valor e cada hospedagem tem tipo e valor. Os valores de pacote de viagem são formados pelos valores do transporte e da hospedagem somados a uma margem de lucro e taxas adicionais.
@@ -39,7 +39,8 @@ Programa métodos e sub-rotinas em classes de acordo com requisitos do sistema e
 Conteúdo acessível em Libras usando o VLibras Widget com opções dos Avatares Ícaro, Hosana ou Guga.Conteúdo acessível em Libras usando o VLibras Widget com opções dos Avatares Ícaro, Hosana ou Guga.
 Exercício
 Recuperação - Atividade 3 - Clique aqui para entregar
-Atividade 3
+
+## Atividade 3
  
 Contexto
 Considere algumas classes de um sistema orientado a objetos que está sendo implementado com funcionalidades relacionadas ao setor de RH e à folha de pagamento. Há dois tipos de funcionários na empresa para a qual esse sistema está sendo desenvolvido: funcionários assalariados, que recebem por mês, e funcionários horistas, que recebem por horas trabalhadas.
@@ -67,7 +68,8 @@ Programa herança em classes de acordo com requisitos do sistema, paradigmas de 
 Utiliza polimorfismo de acordo com requisitos do sistema, paradigmas de orientação a objeto e linguagem de programação.
 Exercício
 Recuperação - Atividade 4 - Clique aqui para entregar
-Atividade 4
+
+## Atividade 4
  
 Contexto
 Considere um módulo contábil de um projeto em desenvolvimento. É preciso representar os diferentes e complexos impostos a serem calculados em vendas de produtos. São necessários cálculos para as contribuições e os impostos a seguir:
@@ -101,7 +103,8 @@ Manipula estruturas de dados de acordo com requisitos do sistema e linguagem de 
 Utiliza linguagem de programação orientada a objetos de acordo com requisitos do sistema e linguagem de programação.
 Exercício
 Recuperação - Atividade 5 - Clique aqui para entregar
-Atividade 5
+
+## Atividade 5
 Contexto
 Um dos sistemas mais recentes na empresa atenderá a uma rede de pizzarias. Nele, poderão ser cadastradas as pizzas e, para cada pizza, seus ingredientes, a fim de que seja montado um cardápio virtual aos clientes. O sistema também será usado para registrar pedidos de pizzas e mostrar na cozinha a próxima pizza a ser preparada, sendo que a primeira pizza pedida deve ser a primeira a ficar pronta.
 Com base nisso, implemente um programa Java que simule o cadastramento de pizzas e o controle de pedidos.
