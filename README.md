@@ -19,10 +19,13 @@
 - [Github](#github)
 - [Licença](#licença)
 
+## Mód II
 
-
-
-
+- Desenvolver Código Orientado a Objetos 
+- Desenvolver e organizar interface gráfica para aplicações desktop (660010641B)
+- Auxiliar na elaboração de projeto de sistemas Orientado a objeto
+- Desenvolver porjeto de interface para melhor experiência do usuário
+- Projeto integrador Assistente de desenvolvimento de sistemas
 
 
 ### Sobre o projeto
